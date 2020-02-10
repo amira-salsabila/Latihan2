@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="@string/header"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"></TextView>
+
+    <EditText
+        android:id="@+id/input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Input Number"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"></EditText>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/btnSin"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="SIN"></Button>
+
+        <Button
+            android:id="@+id/btnCos"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="COS"></Button>
+
+        <Button
+            android:id="@+id/btnCosec"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="CSC"></Button>
+
+        <Button
+            android:id="@+id/btnSecan"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="SEC"></Button>
+
+    </GridLayout>
+
+    <Button
+        android:id="@+id/btnLog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logaritma"></Button>
+
+    <TextView
+        android:id="@+id/tv_hasil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0.0"
+        android:textAlignment="center"
+        android:textSize="40sp" />
+
+</LinearLayout>
