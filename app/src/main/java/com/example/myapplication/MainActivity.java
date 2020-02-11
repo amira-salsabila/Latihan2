@@ -10,7 +10,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-    private Button btnSin, btnCos, btnCosec, btnSec, btnLog;
+    private Button btnSin, btnCos, btnTan, btnCosec, btnSec, btnCotan, btnLog;
     private TextView tvHasil;
     private EditText etInput;
 
@@ -21,8 +21,10 @@ public class MainActivity extends AppCompatActivity {
 
         btnSin = findViewById(R.id.btnSin);
         btnCos = findViewById(R.id.btnCos);
+        btnTan = findViewById(R.id.btnTan);
         btnCosec = findViewById(R.id.btnCosec);
         btnSec = findViewById(R.id.btnSecan);
+        btnCotan = findViewById(R.id.btnCotan);
         btnLog = findViewById(R.id.btnLog);
         etInput = findViewById(R.id.input);
         tvHasil = findViewById(R.id.tv_hasil);
@@ -63,6 +65,24 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnTan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    String sInput = etInput.getText().toString();
+
+                    double input = Double.parseDouble(sInput);
+
+                    double hasil = Math.tan(input);
+
+                    String sHasil = String.valueOf(hasil);
+                    tvHasil.setText(sHasil);
+                } catch (NumberFormatException nfe) {
+                    Toast.makeText(getApplicationContext(), "Please Input the Number", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
         btnCosec.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -90,6 +110,24 @@ public class MainActivity extends AppCompatActivity {
                     double input = Double.parseDouble(sInput);
 
                     double hasil = 1 / Math.cos(input);
+
+                    String sHasil = String.valueOf(hasil);
+                    tvHasil.setText(sHasil);
+                } catch (NumberFormatException nfe) {
+                    Toast.makeText(getApplicationContext(), "Please Input the Number", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        btnCotan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    String sInput = etInput.getText().toString();
+
+                    double input = Double.parseDouble(sInput);
+
+                    double hasil = 1 / Math.tan(input);
 
                     String sHasil = String.valueOf(hasil);
                     tvHasil.setText(sHasil);

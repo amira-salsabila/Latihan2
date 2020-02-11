@@ -27,32 +27,44 @@
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:columnCount="2"
+        android:columnCount="3"
         android:padding="10dp">
 
         <Button
             android:id="@+id/btnSin"
-            android:layout_width="200dp"
+            android:layout_width="135dp"
             android:layout_height="wrap_content"
             android:text="SIN"></Button>
 
         <Button
             android:id="@+id/btnCos"
-            android:layout_width="200dp"
+            android:layout_width="135dp"
             android:layout_height="wrap_content"
             android:text="COS"></Button>
 
         <Button
+            android:id="@+id/btnTan"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:text="TAN"></Button>
+
+        <Button
             android:id="@+id/btnCosec"
-            android:layout_width="200dp"
+            android:layout_width="135dp"
             android:layout_height="wrap_content"
             android:text="CSC"></Button>
 
         <Button
             android:id="@+id/btnSecan"
-            android:layout_width="200dp"
+            android:layout_width="135dp"
             android:layout_height="wrap_content"
             android:text="SEC"></Button>
+
+        <Button
+            android:id="@+id/btnCotan"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:text="COTAN"></Button>
 
     </GridLayout>
 
